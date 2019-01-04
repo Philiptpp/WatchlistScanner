@@ -1,0 +1,16 @@
+# IDE files
+.vscode
+
+# python environment
+env
+env3
+env2
+venv
+venv3
+venv2
+
+# compiled python binaries
+**/__pycache__
+
+# log files
+**/logs/*
