@@ -1,4 +1,5 @@
-from scanner import scan_watchlist
+from scanner import Scanner
 
-
-scan_watchlist()
+my_scanner = Scanner('watchlist.txt')
+my_scanner.ignore_list = ['doji', 'spinning_top']
+my_scanner.scan_watchlist()

@@ -53,9 +53,9 @@ class Bar():
         self.index = index
         self.previous = previous
         self.next = None
-        self.pattern = find_pattern(self)
         if previous is not None:
             self.previous.next = self
+            self.pattern = find_pattern(self)
 
     def __eq__(self, other):
         return self.date == other.date

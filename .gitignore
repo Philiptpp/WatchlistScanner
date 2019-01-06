@@ -14,7 +14,7 @@ venv2
 # compiled python binaries
 **/__pycache__
 **.pytest_cache
-tmp
+tmp/*
 
 
 # log files
