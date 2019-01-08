@@ -1,21 +1,20 @@
 # IDE files
 .vscode
 
-
 # python environment
-env
-env3
-env2
 venv
-venv3
-venv2
-
+venv-dev
 
 # compiled python binaries
 **/__pycache__
 **.pytest_cache
-tmp/*
-
 
 # log files
 **/logs/*
+
+# temp files
+tmp/*
+
+# build files
+.eggs
+**.egg-info

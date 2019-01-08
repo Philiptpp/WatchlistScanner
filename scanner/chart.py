@@ -7,10 +7,10 @@ help auto classify candlestick patterns using Bokeh charting library
 
 import datetime
 
-from patterns import find_pattern
+from scanner.patterns import find_pattern
 
 
-class Chart():
+class Chart(object):
     def __init__(self, df, color_up='blue', color_down='red'):
         self.name = df.symbol[0]
         self.color_up, self.color_down = color_up, color_down
@@ -30,7 +30,7 @@ class Chart():
         if type(date) != datetime.datetime:
             try:
                 date = datetime.datetime.strptime(date, '%d%b%Y')
-            except:
+            except Exception:
                 raise Exception(
                     'Unknown date format. Must be specified like 01Jan2018.')
         bar = [bar for bar in self.bars if bar.date == date]
@@ -40,7 +40,7 @@ class Chart():
         self.active_bar = bar[0]
 
 
-class Bar():
+class Bar(object):
     color_up, color_down = 'blue', 'red'
 
     def __init__(self, series, index, previous):
